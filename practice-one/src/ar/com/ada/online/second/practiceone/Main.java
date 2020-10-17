@@ -11,6 +11,7 @@ public class Main {
     public static void main(String[] args) {
 
         ArrayList<String> nWand = new ArrayList<String>();
+        //los valores que me paso Johana
         nWand.add("madera de serpiente= 4");
         nWand.add("nogal negro=5");
         nWand.add("sauce=2");
@@ -70,6 +71,8 @@ public class Main {
         int ubication, i = 0;;
         System.out.println("Choose location # " + (i + 1) + " : (1 - u1; 2 - u2; 3 - u3): ");
         ubication = keyboard.nextInt();
+
+        //leo la lista y hago radom
 
         HashMap<Integer, String> nWand = new HashMap<Integer, String>();
         nWand.put(1,"madera de serpiente= 4");

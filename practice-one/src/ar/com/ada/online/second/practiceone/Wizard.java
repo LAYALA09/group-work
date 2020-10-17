@@ -3,6 +3,7 @@ package ar.com.ada.online.second.practiceone;
 import superclass.CharactTwo;
 
 public class  Wizard extends CharactTwo {
+    //falta completar
     private String nWand;
     protected static String u1="A";
     protected static String u2="B";

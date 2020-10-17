@@ -2,9 +2,9 @@ package superclass;
 
 public abstract class CharactTwo {
     protected String name;
-    protected static String u1="A";
-    protected static String u2="B";
-    protected static String u3="C";
+    protected static String u1 = "A";
+    protected static String u2 = "B";
+    protected static String u3 = "C";
     protected Integer standardOfLiving;
     protected Integer magicalEnergy;
 
@@ -61,6 +61,7 @@ public abstract class CharactTwo {
     public void setMagicalEnergy(Integer magicalEnergy) {
         this.magicalEnergy = magicalEnergy;
     }
+
     public abstract void game();//metodo abstracto
 
     @Override
