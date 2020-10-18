@@ -1,5 +1,7 @@
 package ar.com.ada.online.second.practiceone;
 
+import spell.Spell;
+
 import java.util.ArrayList;
 import java.util.*;
 
@@ -9,19 +11,15 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) {
-
+        Spell.play();
         ArrayList<String> nWand = new ArrayList<String>();
         //los valores que me paso Johana
         nWand.add("madera de serpiente= 4");
         nWand.add("nogal negro=5");
         nWand.add("sauce=2");
         nWand.add("sauco=3");
-        nWand.add("tamarack=1");
-        nWand.add("vid=3");
 
-        System.out.println("\n" + nWand);
-        Scanner keyboard = new Scanner(System.in);
-        System.out.println("");
+
         System.out.println("The game begins");
         System.out.println("");
         startGame();
@@ -34,6 +32,7 @@ public class Main {
         char response;
         do {
             do {
+                System.out.println("Select player one:");
                 System.out.println("Digitize what character you want");
                 System.out.println("1. Wizard");
                 System.out.println("2. Elf");
@@ -43,9 +42,10 @@ public class Main {
             } while (option < 1 || option > 2);
             switch (option) {
                 case 1:
-                    System.out.println("Enter name:");
-                    String name = keyboard.next();
 
+                    Random nwand=new Random();
+                    int a=nwand.nextInt(6);
+                    System.out.println("Your wand is the number " + a);
                     gameWizard();// juega mago
                     break;
                 case 2:
@@ -67,24 +67,42 @@ public class Main {
 
 
     public static void gameWizard() {
+        int option;
         Scanner keyboard = new Scanner(System.in);
-        int ubication, i = 0;;
-        System.out.println("Choose location # " + (i + 1) + " : (1 - u1; 2 - u2; 3 - u3): ");
-        ubication = keyboard.nextInt();
+        //selecciona mago
+        System.out.println("Select a wizard:");
+        System.out.println("1) Gryffindors");
+        System.out.println("2) Ravenclaws");
+        System.out.println("3) Slytherins");
+        System.out.println("4) Hufflepuffs");
+        System.out.print("Option: ");
+        option = keyboard.nextInt();
 
-        //leo la lista y hago radom
+       //selecciona ubicacion
+        System.out.println("Select a locations:" );
+        System.out.println("1) A");
+        System.out.println("2) B");
+        System.out.println("3) C");
+        System.out.print("Option: ");
+        option = keyboard.nextInt();
 
-        HashMap<Integer, String> nWand = new HashMap<Integer, String>();
-        nWand.put(1,"madera de serpiente= 4");
-        nWand.put(2,"nogal negro=5");
-        nWand.put(3,"sauce=2");
-        nWand.put(4,"sauco=3");
-        nWand.put(5,"tamarack=1");
-        nWand.put(6,"vid=3");
+        //otorgo varita
+       /* System.out.println("List of wands:");
+        System.out.println("madera de serpiente= 4");
+        System.out.println("nogal negro=5");
+        System.out.println("sauce=2");
+        System.out.println("sauco=3");*/
+        HashMap<String, String> nWand = new HashMap<String, String>();
 
         Random nwand=new Random();
-        int a=nwand.nextInt(6);
-        System.out.println("Your wand is the number " + a);
+        /*String a=nwand.nextLong(length);
+        System.out.println("Your wand is the number " + a);*/
+
+
+        // hago radom
+
+
+
 
 
 

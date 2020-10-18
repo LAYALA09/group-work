@@ -2,9 +2,9 @@ package superclass;
 
 public abstract class CharactTwo {
     protected String name;
-    protected static String u1 = "A";
+   /* protected static String u1 = "A";
     protected static String u2 = "B";
-    protected static String u3 = "C";
+    protected static String u3 = "C";*/
     protected Integer standardOfLiving;
     protected Integer magicalEnergy;
 
@@ -22,7 +22,7 @@ public abstract class CharactTwo {
         this.name = name;
     }
 
-    public static String getU1() {
+    /*public static String getU1() {
         return u1;
     }
 
@@ -44,7 +44,7 @@ public abstract class CharactTwo {
 
     public static void setU3(String u3) {
         CharactTwo.u3 = u3;
-    }
+    }*/
 
     public Integer getStandardOfLiving() {
         return standardOfLiving;
