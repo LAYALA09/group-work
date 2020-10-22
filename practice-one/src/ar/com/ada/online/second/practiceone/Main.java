@@ -12,17 +12,12 @@ public class Main {
 
     public static void main(String[] args) {
         Spell.play();
-        ArrayList<String> nWand = new ArrayList<String>();
-        //los valores que me paso Johana
-        nWand.add("madera de serpiente= 4");
-        nWand.add("nogal negro=5");
-        nWand.add("sauce=2");
-        nWand.add("sauco=3");
 
 
         System.out.println("The game begins");
         System.out.println("");
         startGame();
+
     }
 
 
@@ -43,10 +38,8 @@ public class Main {
             switch (option) {
                 case 1:
 
-                    Random nwand=new Random();
-                    int a=nwand.nextInt(6);
-                    System.out.println("Your wand is the number " + a);
                     gameWizard();// juega mago
+                    WandWizard();
                     break;
                 case 2:
                     System.out.println("Enter name:");
@@ -66,6 +59,7 @@ public class Main {
     }
 
 
+
     public static void gameWizard() {
         int option;
         Scanner keyboard = new Scanner(System.in);
@@ -78,37 +72,40 @@ public class Main {
         System.out.print("Option: ");
         option = keyboard.nextInt();
 
-       //selecciona ubicacion
-        System.out.println("Select a locations:" );
+        //selecciona ubicacion
+        System.out.println("Select a locations:");
         System.out.println("1) A");
         System.out.println("2) B");
         System.out.println("3) C");
         System.out.print("Option: ");
         option = keyboard.nextInt();
 
-        //otorgo varita
-       /* System.out.println("List of wands:");
-        System.out.println("madera de serpiente= 4");
-        System.out.println("nogal negro=5");
-        System.out.println("sauce=2");
-        System.out.println("sauco=3");*/
-        HashMap<String, String> nWand = new HashMap<String, String>();
-
-        Random nwand=new Random();
-        /*String a=nwand.nextLong(length);
-        System.out.println("Your wand is the number " + a);*/
-
-
-        // hago radom
-
-
-
-
-
-
     }
 
+
+
+    public static void WandWizard() {
+
+        ArrayList<String> nWand = new ArrayList<String>();
+
+        //los valores que me paso Johana
+        nWand.add("madera de serpiente= 4");
+        nWand.add("nogal negro=5");
+        nWand.add("sauce=2");
+        nWand.add("sauco=3");
+        nWand.add("diamond=4");
+
+
+        Random random=new Random();
+        for (int i = 0; i < nWand.size(); i++) {
+
+        }
+
+        System.out.println("Your wand is the number " + nWand.get(random.nextInt(nWand.size())));
+    }
 }
+
+
 
 
 

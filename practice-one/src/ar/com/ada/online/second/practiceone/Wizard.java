@@ -33,7 +33,7 @@ public class  Wizard extends CharactTwo {
 
     @Override
     public String toString() {
-        return "Wizard{" +
+        return "Wizard" +
                 "nWand='" + nWand + '\'' +
                 '}';
     }
