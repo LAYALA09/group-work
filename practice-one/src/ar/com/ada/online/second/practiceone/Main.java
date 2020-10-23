@@ -39,6 +39,7 @@ public class Main {
                 case 1:
 
                     gameWizard();// juega mago
+                    System.out.println();
                     WandWizard();
                     break;
                 case 2:
@@ -71,6 +72,7 @@ public class Main {
         System.out.println("4) Hufflepuffs");
         System.out.print("Option: ");
         option = keyboard.nextInt();
+        System.out.print(" ");
 
         //selecciona ubicacion
         System.out.println("Select a locations:");
@@ -79,6 +81,7 @@ public class Main {
         System.out.println("3) C");
         System.out.print("Option: ");
         option = keyboard.nextInt();
+        System.out.print("");
 
     }
 
@@ -94,14 +97,32 @@ public class Main {
         nWand.add("sauce=2");
         nWand.add("sauco=3");
         nWand.add("diamond=4");
-
-
+        System.out.println("Magic wands:\n" + nWand);
+        System.out.println();
         Random random=new Random();
         for (int i = 0; i < nWand.size(); i++) {
 
         }
 
         System.out.println("Your wand is the number " + nWand.get(random.nextInt(nWand.size())));
+    }
+    public static void SpellWizard() {
+        ArrayList<String> attackingSpells = new ArrayList<String>();
+        attackingSpells.add("LEVICORPUS {Attacks: 10, Magic Energy: 5}");
+        attackingSpells.add("REDUCTO {Attacks: 20, Magic Energy: 15}");
+        attackingSpells.add("CONFRINGO {Attacks: 15, Magic Energy: 10}");
+        attackingSpells.add("DEPRIMO {Attacks: 10, Magic Energy: 5}");
+        attackingSpells.add("GLACIUS {Attacks: 25, Magic Energy: 20}");
+        attackingSpells.add("INCENDIO {Attacks: 25, Magic Energy: 20}");
+        attackingSpells.add("CRUCIATUS {Attacks: 80, Magic Energy: 70}");
+        attackingSpells.add("IMPERIUS {Attacks: 90, Magic Energy: 80}");
+        attackingSpells.add("Avada Kedavra:{Attacks: 100, Magic Energy: 90}");
+
+       //seleccionar hechizo
+       // desea seleccionar otro de ataque?
+        //contar hechizos seleccionados
+        //if dano<25 puede continuar
+
     }
 }
 
