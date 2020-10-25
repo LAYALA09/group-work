@@ -1,5 +1,6 @@
 package ar.com.ada.online.second.practiceone;
 
+import spell.Spell;
 import superclass.CharacterTwo;
 
 import java.util.Objects;
@@ -40,6 +41,12 @@ public class  Wizard extends CharacterTwo {
                 magicWand.equals(that.magicWand);
     }
     public void isDarkOrNot(boolean darkWizard) {///metodo booleano para saber si es oscuro o no
+
+       // if amountspell>3*/
+
+
+
+
 
     }
     public int hashCode() {
