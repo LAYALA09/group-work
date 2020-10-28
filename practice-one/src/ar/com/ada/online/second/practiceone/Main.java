@@ -135,7 +135,7 @@ public class Main {
                 System.out.println("");
                 System.out.println("You can only choose six spells in total");
                 System.out.println("Select tipe of spell:");
-                System.out.println("1. Attack:/n" get.AttackSpells);
+                System.out.println("1. Attack:/n" get.AttackSpells);/// y esto tb pero no logre asociar/
                 System.out.println("2. Recovery"get.RecoverySpells);
                 System.out.println("3. Healing"get.HealingSpells);
                 System.out.print("Option: ");

@@ -79,10 +79,10 @@ public class Spell {
     }
 
 
-
+///esto agregue de la ultima clase
     public static void TypeOfSpell() {
         List<Spell> lista=new ArrayList<>();
-        lista.add(new Spell("LEVICORPUS", 10, 5));
+        lista.add(new Spell("LEVICORPUS", 10, 5)); //error
 
     }
 }
