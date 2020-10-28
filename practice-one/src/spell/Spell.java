@@ -1,10 +1,12 @@
 package spell;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
 public class Spell {
+    int restMagicEnergy;
 
     //metodo lista de hechizos ataques
     public static void attackingSpellsList() {
@@ -27,7 +29,7 @@ public class Spell {
             //Es una maldición asesina
             attackingSpells.add("9-AVADA KEDAVRA:{Attacks: 100, Magic Energy: 90}");
             System.out.println("");
-            System.out.println("select your spell:");
+
             Spell spell = new Spell();
             for (String cadena : attackingSpells) {
                 System.out.println(cadena);
@@ -38,7 +40,9 @@ public class Spell {
             System.out.print(" ");
 
 
-            System.out.print("System.out.println(\"do you want select another of attach?");
+
+
+            System.out.print("do you want select another of attach?");
             response = keyboard.next().charAt(0);///guarda solo un caracter, y declarmos la variable tipo char
             amountspell = amountspell + 1;
             System.out.println("");
@@ -74,52 +78,11 @@ public class Spell {
         recoverySpells.add("ANAPNEO {Recovery: 10, Magic Energy: 8  }");
     }
 
+
+
     public static void TypeOfSpell() {
-        int amountspell = 0;
-        Scanner keyboard = new Scanner(System.in);
-        int option;
-        char response;
-        do {
-            do {
-                System.out.println("");
-                System.out.println("ATTENTION !!!");
-                System.out.println("");
-                System.out.println("You can only choose six spells in total");
-                System.out.println("Select tipe of spell:");
-                System.out.println("1. Attack");
-                System.out.println("2. Recovery");
-                System.out.println("3. Healing");
-                System.out.print("Option: ");
-                option = keyboard.nextInt();
-
-            } while (option < 1 || option > 3);
-
-            switch (option) {
-                case 1:
-                    //lista hechizos de ataque
-                    attackingSpellsList();
-                    System.out.println(amountspell );
-
-                     break;
-
-                case 2:
-                    System.out.println("select your spell:");
-                    recoverySpellsList();
-                    System.out.println("do you want select another of healing?");
-                    //falta hacer bifurcacion
-                    break;
-                case 3:
-                    System.out.println("select your spell:");
-                    healingSpellsList();
-                    System.out.println("do you want select another of healing?");
-                    break;
-            }
-            System.out.print("\nYou want to introduce another spell(s/n: ");
-            response = keyboard.next().charAt(0);///guarda solo un caracter, y declarmos la variable tipo char
-
-            System.out.println("");
-
-        } while (response == 's' || response == 'S');
+        List<Spell> lista=new ArrayList<>();
+        lista.add(new Spell("LEVICORPUS", 10, 5));
 
     }
 }

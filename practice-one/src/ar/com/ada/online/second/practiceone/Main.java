@@ -124,12 +124,31 @@ public class Main {
         System.out.print("");
 
     }
+    public static void TypeOfSpell() {
+
+        Scanner keyboard = new Scanner(System.in);
+        int option;
+        char response;
+
+                System.out.println("");
+                System.out.println("ATTENTION !!!");
+                System.out.println("");
+                System.out.println("You can only choose six spells in total");
+                System.out.println("Select tipe of spell:");
+                System.out.println("1. Attack:/n" get.AttackSpells);
+                System.out.println("2. Recovery"get.RecoverySpells);
+                System.out.println("3. Healing"get.HealingSpells);
+                System.out.print("Option: ");
+                option = keyboard.nextInt();
+            }
+        }
 
 
 
 
 
-    }
+
+
 
 
 
