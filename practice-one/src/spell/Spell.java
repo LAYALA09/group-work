@@ -6,7 +6,21 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Spell {
-    int restMagicEnergy;
+
+    private int magicEnergySpent;
+
+    public Spell(int magicEnergySpent) {
+        this.magicEnergySpent = magicEnergySpent;
+    }
+
+    public int getMagicEnergySpent() {
+        return magicEnergySpent;
+    }
+
+    public void setMagicEnergySpent(int magicEnergySpent) {
+        this.magicEnergySpent = magicEnergySpent;
+    }
+
 
     //metodo lista de hechizos ataques
     public static void attackingSpellsList() {
@@ -84,7 +98,7 @@ public class Spell {
         List<Spell> lista=new ArrayList<>();
         lista.add(new Spell("LEVICORPUS", 10, 5)); //error
 
-    }
+    } 
 }
 
 

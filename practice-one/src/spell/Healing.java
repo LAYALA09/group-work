@@ -1,5 +1,11 @@
 package spell;
 
 public class Healing extends Spell{
-    int sumLifeSpand;
+   private int lifeRecovered;
+   //Constructor
+
+    public Healing(int lifeRecovered, int magicEnergySpent) {
+        super(magicEnergySpent);
+        this.lifeRecovered = lifeRecovered;
+    }
 }
