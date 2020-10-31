@@ -6,7 +6,7 @@ import java.util.Objects;
 
 public class Elf extends CharacterTwo {
 
-    public Elf(String name, Integer location, Integer lifeSpan, Integer magicEnergy, String spells, String typeOfCharacter) {
+    public Elf() {
         super();
 
     }

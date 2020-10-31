@@ -1,71 +1,120 @@
 package ar.com.ada.online.second.practiceone;
 
-import spell.Spell;
+import TipeSpell.Wand;
 import superclass.CharacterTwo;
 
 import java.util.Objects;
 
 public class  Wizard extends CharacterTwo {
 
-    private String magicWand;
+  protected Wand wand;
 
 
-    public Wizard(String name, Integer location, Integer lifeSpan, Integer magicEnergy, String spells, String typeOfCharacter) {
-        super();
-        this.magicWand = magicWand;
+
+    public Wizard(){
     }
 
+   //getters and setters
 
-    public String getMagicWand() {
-        return magicWand;
+
+    public Wand getWand() {
+        return wand;
     }
 
-    public void setMagicWand(String magicWand) {
-        this.magicWand = magicWand;
+    public void setWand(Wand wand) {
+        this.wand = wand;
+    }
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public Integer getLocation() {
+        return location;
+    }
+    public void setLocation(Integer location) {
+        this.location = location;
+    }
+    public Integer getLifeSpan() {
+        return lifeSpan;
+    }
+    public void setLifeSpan(Integer lifeSpan) {
+        this.lifeSpan = lifeSpan;
+    }
+    public Integer getMagicEnergy() {
+        return magicEnergy;
+    }
+    public void setMagicEnergy(Integer magicEnergy) {
+        this.magicEnergy = magicEnergy;
+    }
+    public String getTypeOfCharacter() {
+        return typeOfCharacter;
+    }
+    public void setTypeOfCharacter(String typeOfCharacter) {
+        this.typeOfCharacter = typeOfCharacter;
     }
 
-    public void game() {
+    // Methods
 
+    public boolean isDarkOrNot(boolean darkWizard, int counterAttackSpells) {
+        for (int i = 0; i < 6; i++) {
+
+
+        switch (spells.getClass().getSimpleName()) {
+            case "Attack":
+                counterAttackSpells++;
+            default:
+                counterAttackSpells = counterAttackSpells;
+        }
     }
-
+        if (counterAttackSpells > 3) {
+        darkWizard = true;
+    } else {
+        darkWizard = false;
+    }
+        return darkWizard;
+}
+    // Overrides
+    @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
+
         Wizard that = (Wizard) obj;
         return location == that.location &&
                 name.equals(that.name) &&
                 lifeSpan.equals(that.lifeSpan) &&
                 magicEnergy.equals(that.magicEnergy) &&
-                spells.equals(that.spells) &&
                 typeOfCharacter.equals(that.typeOfCharacter) &&
-                magicWand.equals(that.magicWand);
+
+        wand.equals(that.wand);
     }
-    public void isDarkOrNot(boolean darkWizard) {///metodo booleano para saber si es oscuro o no
 
-       // if amountspell>3*/
-
-
-
-
-
-    }
+    @Override
     public int hashCode() {
 
-        return Objects.hash(name, location, lifeSpan, magicEnergy, spells, typeOfCharacter, magicWand);
+        return Objects.hash(name, location, lifeSpan, magicEnergy, typeOfCharacter, wand, spells);
     }
+
     @Override
     public String toString() {
         return String.format(
-        "Character{ Type of Character = %s \n Name= %s \n Location= %d \n Life span= %d \n Magic energy= %d \n Spells= %s \n Magic Wand = %s \n}",
+                "Character{ Type of Character = %s \n Name= %s \n Location= %d \n Life span= %d \n Magic energy= %d \n Spells= %s \n Magic Wand = %s \n}",
+                "Character{ Type of Character = %s \n Name= %s \n Location= %d \n Life span= %d \n Magic energy= %d \n Magic Wand = %s \n Spells= %s \n}",
                 typeOfCharacter,
                 name,
                 location,
                 lifeSpan,
                 magicEnergy,
-                spells,
-                magicWand);
+
+        wand,
+                spells);
     }
-    }
+
+}
+
+
 
 
 

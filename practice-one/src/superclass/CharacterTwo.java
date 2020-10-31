@@ -2,7 +2,7 @@ package superclass;
 
 import java.util.Objects;
 
-public abstract class CharacterTwo {
+public  class CharacterTwo {
     protected String name;
     protected Integer location;
     protected Integer lifeSpan;
