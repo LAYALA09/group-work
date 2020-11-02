@@ -14,9 +14,11 @@ public class Main {
         CharacterTwo Player2 = new CharacterTwo();
         System.out.println("The game begins");
         System.out.println("");
-        Player1 = GameActions.startGame();
-        Player2 = GameActions.startGame();
+        System.out.println("\nTurno del jugador uno: ");
+        Player1 = GameActions.StartGame();
         System.out.println(Player1);
+        System.out.println("\n Turno del jugador dos: ");
+        Player2 = GameActions.StartGame();
         System.out.println(Player2);
     }
         }

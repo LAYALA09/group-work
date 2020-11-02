@@ -1,5 +1,7 @@
 package TipeSpell;
 
+import java.util.Scanner;
+
 public class HealingSpell extends Spell{
    private int lifeRecovered;
    //Constructor
@@ -9,7 +11,12 @@ public class HealingSpell extends Spell{
             super(magicEnergySpent);
             this.lifeRecovered = lifeRecovered;
         }
-        // Getters & Setters
+
+    public HealingSpell(Scanner keyboard) {
+        super();
+    }
+
+    // Getters & Setters
         public int getLifeRecovered() {
             return lifeRecovered;
         }

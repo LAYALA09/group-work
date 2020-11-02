@@ -1,17 +1,26 @@
 package TipeSpell;
 
-public class RecoverySpell extends Spell {
+import java.util.Scanner;
 
-    int energyRecovered;
-    public RecoverySpell(int magicEnergySpent, int energyRecovered) {
-        super(magicEnergySpent);
-        this.energyRecovered = energyRecovered;
+public class RecoverySpell extends Spell {
+    private Integer recoveryLevel;
+
+    public RecoverySpell(Integer magicEnergySpent, String name, Integer recoveryLevel, Integer recoveryLevel1) {
+        super(magicEnergySpent, name, recoveryLevel);
+        this.recoveryLevel = recoveryLevel1;
     }
-    //Getter & Setter
-    public int getEnergyRecovered() {
-        return energyRecovered;
+
+    public RecoverySpell(Scanner keyboard) {
+        super();
     }
-    public void setEnergyRecovered(int energyRecovered) {
-        this.energyRecovered = energyRecovered;
+
+    @Override
+    public Integer getRecoveryLevel() {
+        return recoveryLevel;
+    }
+
+    @Override
+    public void setRecoveryLevel(Integer recoveryLevel) {
+        this.recoveryLevel = recoveryLevel;
     }
 }

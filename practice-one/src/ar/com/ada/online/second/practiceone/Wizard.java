@@ -101,7 +101,7 @@ public class  Wizard extends CharacterTwo {
     public String toString() {
         return String.format(
                 "Character{ Type of Character = %s \n Name= %s \n Location= %d \n Life span= %d \n Magic energy= %d \n Spells= %s \n Magic Wand = %s \n}",
-                "Character{ Type of Character = %s \n Name= %s \n Location= %d \n Life span= %d \n Magic energy= %d \n Magic Wand = %s \n Spells= %s \n}",
+
                 typeOfCharacter,
                 name,
                 location,
