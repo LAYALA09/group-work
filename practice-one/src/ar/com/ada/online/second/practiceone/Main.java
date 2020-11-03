@@ -15,10 +15,11 @@ public class Main {
         System.out.println("The game begins");
         System.out.println("");
         System.out.println("\nTurno del jugador uno: ");
-        Player1 = GameActions.StartGame();
+        Player1 = GameActions.startGame();
         System.out.println(Player1);
+
         System.out.println("\n Turno del jugador dos: ");
-        Player2 = GameActions.StartGame();
+        Player2 = GameActions.startGame();
         System.out.println(Player2);
     }
         }

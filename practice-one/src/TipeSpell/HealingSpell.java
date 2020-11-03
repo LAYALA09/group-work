@@ -12,9 +12,7 @@ public class HealingSpell extends Spell{
             this.lifeRecovered = lifeRecovered;
         }
 
-    public HealingSpell(Scanner keyboard) {
-        super();
-    }
+
 
     // Getters & Setters
         public int getLifeRecovered() {

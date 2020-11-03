@@ -7,30 +7,18 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class AttackSpell extends Spell {
-    private Integer attackLevel;//nivel de ataque
-    Spell spell = new Spell();
-    Spell spell= new AttackSpell();
-    private ArrayList<Spell> spell;
-    public AttackSpell(Integer magicEnergySpent, String name, Integer attackLevel, Integer recoveryLevel, Integer attackLevel1) {
-        super(magicEnergySpent, name, recoveryLevel);
-        this.attackLevel = attackLevel1;
-    }
 
 
-
-    @Override
-    public Integer getAttackLevel() {
-        return attackLevel;
-    }
-
-    @Override
-    public void setAttackLevel(Integer attackLevel) {
-        this.attackLevel = attackLevel;
+    public AttackSpell(String name, Integer magicEnergySpent, Integer attackLevel) {
+        super(name, magicEnergySpent, attackLevel);
     }
 
 
     ///Descripcion de hechizos de ataques
-    public  void AttachSpellSelection(Scanner keyboard) {
+    public static AttackSpell AttackSpellSelection() {
+
+        Spell add=new AttackSpell();
+        Scanner keyboard = new Scanner(System.in);
         int option;
         System.out.println();
         System.out.println("ATTENTION !!!");
@@ -52,84 +40,74 @@ public class AttackSpell extends Spell {
         option = keyboard.nextInt();
         switch (option) {
             case 1:
-                spell.setName("BOMBARDA MAXIMA");
-                AttackSpell.setAttackLevel(10);
-                spell.setMagicEnergySpent(5);
+                add.setName("BOMBARDA MAXIMA");
+                add.setAttackLevel(10);
+                add.setMagicEnergySpent(5);
                 break;
             case 2:
-                AttackSpell.super.setName("DESMAIUS");
-                AttackSpell.setAttackLevel(15);
-                AttackSpell.super.setMagicEnergySpent(10);
+                add.setName("DESMAIUS");
+                add.setAttackLevel(15);
+                add.setMagicEnergySpent(10);
                 break;
             case 3:
-                AttackSpell.super.setName("EXPULSO");
-                AttackSpell.setAttackLevel(20);
-                AttackSpell.super.setMagicEnergySpent(15);
+                add.setName("EXPULSO");
+                add.setAttackLevel(20);
+                add.setMagicEnergySpent(15);
                 break;
             case 4:
-                AttackSpell.super.setName("LEVICORPUS");
-                AttackSpell.setAttackLevel(10);
-                AttackSpell.super.setMagicEnergySpent(5);
+                add.setName("LEVICORPUS");
+                add.setAttackLevel(10);
+                add.setMagicEnergySpent(5);
                 break;
             case 5:
-                AttackSpell.super.setName("REDUCTO");
-                AttackSpell.setAttackLevel(20);
-                AttackSpell.super.setMagicEnergySpent(15);
+                add.setName("REDUCTO");
+                add.setAttackLevel(20);
+                add.setMagicEnergySpent(15);
                 break;
             case 6:
-                spell.setName("CONFRINGO");
-                spell.setAttackLevel(15);
-                spell.setMagicEnergySpent(10);
+                add.setName("CONFRINGO");
+                add.setAttackLevel(15);
+                add.setMagicEnergySpent(10);
                 break;
             case 7:
-                spell.setName("DEPRIMO");
-                spell.setAttackLevel(10);
-                spell.setMagicEnergySpent(5);
+                add.setName("DEPRIMO");
+                add.setAttackLevel(10);
+                add.setMagicEnergySpent(5);
                 break;
             case 8:
-                spell.setName("GLACIUS");
-                spell.setAttackLevel(25);
-                spell.setMagicEnergySpent(20);
+                add.setName("GLACIUS");
+                add.setAttackLevel(25);
+                add.setMagicEnergySpent(20);
                 break;
             case 9:
-                spell.setName("INCENDIO");
-                spell.setAttackLevel(25);
-                spell.setMagicEnergySpent(20);
+                add.setName("INCENDIO");
+                add.setAttackLevel(25);
+                add.setMagicEnergySpent(20);
                 break;
             case 10:
-                spell.setName("AVADA KEDAVRA ");
-                spell.setAttackLevel(100);
-                spell.setMagicEnergySpent(90);
+                add.setName("AVADA KEDAVRA ");
+                add.setAttackLevel(100);
+                add.setMagicEnergySpent(90);
                 break;
             case 11:
-                spell.setName("CRUCIATUS ");
-                AttackSpell.setAttackLevel(80);
-                spell.setMagicEnergySpent(70);
+                add.setName("CRUCIATUS ");
+                add.setAttackLevel(80);
+                add.setMagicEnergySpent(70);
                 break;
             case 12:
-                spell.setName("IMPERIUS");
-                AttackSpell.setAttackLevel(90);
-                spell.setMagicEnergySpent(80);
+                add.setName("IMPERIUS");
+                add.setAttackLevel(90);
+                add.setMagicEnergySpent(80);
                 break;
             default:
                 System.out.println("Opcion incorrecta.");
 
         }
     }
-
-
-    @Override
-    public void setMagicEnergySpent(int magicEnergySpent) {
-        super.setMagicEnergySpent(magicEnergySpent);
-    }
-    @Override
-    public int getMagicEnergySpent() {
-        return super.getMagicEnergySpent();
-    }
-    public int getDamageMade() {
-        return damageMade;
-    }
-    public void setDamageMade(int damageMade) {
-        this.damageMade = damageMade;
-    }
 }
+
+
+
+
+
+

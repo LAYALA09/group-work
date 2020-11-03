@@ -11,15 +11,13 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class GameActions {
-    CharacterTwo  Wizard = new Wizard();
 
+    private ArrayList<Spell> spell;
     CharacterTwo elf = new Elf();
 
-    Spell spell = new Spell();
-
-
-    public void StartGame(Scanner keyboard) {
-        CharacterTwo auxiliar=new CharacterTwo;
+    public static CharacterTwo startGame() {
+        CharacterTwo star = new CharacterTwo();
+        Scanner keyboard = new Scanner(System.in);
         int option;
         System.out.println("Player one");
         System.out.println("Digitize what character you want");
@@ -32,11 +30,12 @@ public class GameActions {
             case 1:
                 //mago
                 return gameWizard();// metodo de mago y las elecciones para el juego
+            TipeSpell.Spell.AttackSpell.addSpell();
             case 2:
 
                 Elf Player1Elf = new Elf();
                 gameElf(); //metodo de elfo y las elecciones para el juego
-                AttackSpell.AttachSpellSelection();//metodo para elegir hechizos
+                TipeSpell.AttackSpell.AttackSpellSelection();//metodo para elegir hechizos
                 break;
 
             default:
@@ -48,11 +47,11 @@ public class GameActions {
         System.out.println("");
 
 
-        return auxiliar;
+        return star;
     }
 
+    ///metodo mago
     public static Wizard gameWizard() {
-
 
         Wizard Player1Wizard = new Wizard();
         Scanner keyboard = new Scanner(System.in);
@@ -71,12 +70,13 @@ public class GameActions {
         Player1Wizard.setLifeSpan(100);
         Player1Wizard.setMagicEnergy(100);
         Player1Wizard.setTypeOfCharacter("wizard");
-        Player1Wizard.WandWizard();
+        Player1Wizard.setWand(WandWizard());
 
 //        SpellSelection();
         return Player1Wizard;
     }
 
+    //metodo varitas random
     public static Wand WandWizard() {
         int option;
         List<Wand> nWand = new ArrayList<>();
@@ -88,6 +88,7 @@ public class GameActions {
         nWand.add(new Wand(5, "Alamo temblon: +5 attacking points"));
         System.out.println("Magic wands:\n" + nWand + "\n");
         System.out.println();
+
         Random random = new Random();
         for (int i = 0; i < nWand.size(); i++) {
 
@@ -102,7 +103,9 @@ public class GameActions {
 
     }
 
+    ///metodo de elfos
     public static void gameElf() {
+        CharacterTwo elf = new Elf();
         String name;
         int option;
         Scanner keyboard = new Scanner(System.in);
@@ -124,8 +127,6 @@ public class GameActions {
 
 
 
-
-
        /* System.out.printf("Healing Spells: \n { \n",
                 "13. ANAPNEO { recovered life points: 20, magic energy used: 20 } \n",
                 "14. BRAQUIAM EMENDO { recovered life points: 15, magic energy used: 20 }\n",
@@ -140,6 +141,43 @@ public class GameActions {
         );
         System.out.print("Option: ");
         option = keyboard.nextInt();
-    }*/
-}
 
+    }*/
+
+    //metodo para seleccionar los seis hechizos de ataque, sanacion, recuperacion
+
+    public static AttackSpell addSpell() {
+        Spell star = new AttackSpell();
+        Scanner keyboard = new Scanner(System.in);
+        int continueMenu;
+
+
+        do {
+
+            System.out.println("Please enter a category of spells: \n");
+            System.out.println("\t1)Attack Spell\n");
+            System.out.println("\t2)Healing Spell\n");
+            System.out.println("\t3)Recovery Spell\n");
+            int option = keyboard.nextInt();
+
+            switch (option) {
+                case 1:
+
+                    TipeSpell.AttackSpell.AttackSpellSelection();
+
+                    break;
+                case 2:
+                    /*TipeSpell.HealingSpell.HealingSpellSelection();
+                    break;
+                case 3:
+                    TipeSpell.RecoverySpell.RecoverySpellSelection( );
+                    break;*/
+                default:
+                    System.out.println("Opcion incorrecta.");
+            }
+            System.out.println("Desea agregar otro Hechizo?: \n\t1) Si\n\t2)No");
+            continueMenu = keyboard.nextInt();
+        } while (continueMenu == 1);
+    }
+
+}

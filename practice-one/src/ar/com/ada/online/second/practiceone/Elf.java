@@ -6,10 +6,7 @@ import java.util.Objects;
 
 public class Elf extends CharacterTwo {
 
-    public Elf() {
-        super();
 
-    }
 
     //methods
 
