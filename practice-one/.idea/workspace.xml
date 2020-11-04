@@ -87,34 +87,38 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="638" y="0" key="#com.intellij.ide.util.MemberChooser" timestamp="1604352025083">
+    <state x="638" y="0" key="#com.intellij.ide.util.MemberChooser" timestamp="1604447274572">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="638" y="0" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1604352025083" />
+    <state x="638" y="0" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1604447274572" />
+    <state x="1005" y="352" width="759" height="353" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1604436985014">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1005" y="352" width="759" height="353" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040@0.0.1920.1040" timestamp="1604436985014" />
     <state x="815" y="71" key="FileChooserDialogImpl" timestamp="1603470520658">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="815" y="71" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1603470520658" />
-    <state width="1843" height="333" key="GridCell.Tab.0.bottom" timestamp="1604285555671">
+    <state width="1700" height="226" key="GridCell.Tab.0.bottom" timestamp="1604457428159">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1843" height="333" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604285555671" />
-    <state width="1843" height="333" key="GridCell.Tab.0.center" timestamp="1604285555671">
+    <state width="1700" height="226" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604457428159" />
+    <state width="1700" height="226" key="GridCell.Tab.0.center" timestamp="1604457428159">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1843" height="333" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604285555671" />
-    <state width="1843" height="333" key="GridCell.Tab.0.left" timestamp="1604285555671">
+    <state width="1700" height="226" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604457428159" />
+    <state width="1700" height="226" key="GridCell.Tab.0.left" timestamp="1604457428159">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1843" height="333" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604285555671" />
-    <state width="1843" height="333" key="GridCell.Tab.0.right" timestamp="1604285555671">
+    <state width="1700" height="226" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604457428159" />
+    <state width="1700" height="226" key="GridCell.Tab.0.right" timestamp="1604457428159">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1843" height="333" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604285555671" />
-    <state x="689" y="146" key="refactoring.ChangeSignatureDialog" timestamp="1604351939179">
+    <state width="1700" height="226" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604457428159" />
+    <state x="689" y="146" key="refactoring.ChangeSignatureDialog" timestamp="1604405888785">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="689" y="146" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604351939179" />
+    <state x="689" y="146" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604405888785" />
     <state x="844" y="232" key="run.anything.popup" timestamp="1603335670951">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

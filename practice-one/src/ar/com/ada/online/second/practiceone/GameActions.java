@@ -1,10 +1,12 @@
 package ar.com.ada.online.second.practiceone;
 
 import TipeSpell.AttackSpell;
+import TipeSpell.HealingSpell;
 import TipeSpell.Spell;
 import TipeSpell.Wand;
 import superclass.CharacterTwo;
 
+import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -12,7 +14,7 @@ import java.util.Scanner;
 
 public class GameActions {
 
-    private ArrayList<Spell> spell;
+
     CharacterTwo elf = new Elf();
 
     public static CharacterTwo startGame() {
@@ -29,13 +31,17 @@ public class GameActions {
         switch (option) {
             case 1:
                 //mago
-                return gameWizard();// metodo de mago y las elecciones para el juego
-            TipeSpell.Spell.AttackSpell.addSpell();
+
+
+                gameWizard();// metodo de mago y las elecciones para el juego
+                SpellSelection();
+
             case 2:
 
                 Elf Player1Elf = new Elf();
                 gameElf(); //metodo de elfo y las elecciones para el juego
-                TipeSpell.AttackSpell.AttackSpellSelection();//metodo para elegir hechizos
+                SpellSelection();//metodo para elegir hechizos
+
                 break;
 
             default:
@@ -71,6 +77,7 @@ public class GameActions {
         Player1Wizard.setMagicEnergy(100);
         Player1Wizard.setTypeOfCharacter("wizard");
         Player1Wizard.setWand(WandWizard());
+        Player1Wizard.getSpells();///mi duda no se como instanciar los hechizos del jugador 1
 
 //        SpellSelection();
         return Player1Wizard;
@@ -125,6 +132,122 @@ public class GameActions {
     }
 
 
+    //Descripcion de hechizos de ataques
+    public static Spell SpellSelection() {
+
+
+        Spell add = new Spell();
+
+
+        Scanner keyboard = new Scanner(System.in);
+        int option;
+        System.out.println();
+        System.out.println("ATTENTION !!!");
+        System.out.println();
+        System.out.println("You can only choose six spells in total");
+
+        for (int i = 0; i < 6; i++) {
+
+            System.out.println("Attacking Spells: \n ");
+            System.out.println("\t1-BOMBARDA MAXIMA - attacks: 10, magic energy used: 5 ");
+            System.out.println("\t2-DESMAIUS - attacks: 15, magic energy used: 10 ");
+            System.out.println("\t3-EXPULSO - attacks: 20, magic energy used: 15 ");
+            System.out.println("\t4-LEVICORPUS - attacks: 10, magic energy used: 5 ");
+            System.out.println("\t5-REDUCTO - attacks: 20, magic energy used: 15 ");
+            System.out.println("\t6-CONFRINGO - attacks: 15, magic energy used: 10 ");
+            System.out.println("\t7-DEPRIMO - attacks: 10, magic energy used: 5  ");
+            System.out.println("\t8-GLACIUS - attacks: 25, magic energy used: 20  ");
+            System.out.println("\t9-INCENDIO - attacks: 25, magic energy used: 20 ");
+            System.out.println("\t10-AVADA KEDAVRA - attacks: 100, magic energy used: 90");
+            System.out.println("\t11-CRUCIATUS - attacks: 80, magic energy used: 70 ");
+            System.out.println("\t12-IMPERIUS - attacks: 90, magic energy used: 80");
+            option = keyboard.nextInt();
+         // cargue solo estos 12 a modo de prueba.
+            switch (option) {
+                case 1:
+                    add.setName("BOMBARDA MAXIMA");
+                    add.setAttackLevel(10);
+                    add.setMagicEnergySpent(5);
+                    break;
+                case 2:
+                    add.setName("DESMAIUS");
+                    add.setAttackLevel(15);
+                    add.setMagicEnergySpent(10);
+                    break;
+                case 3:
+                    add.setName("EXPULSO");
+                    add.setAttackLevel(20);
+                    add.setMagicEnergySpent(15);
+                    break;
+                case 4:
+                    add.setName("LEVICORPUS");
+                    add.setAttackLevel(10);
+                    add.setMagicEnergySpent(5);
+                    break;
+                case 5:
+                    add.setName("REDUCTO");
+                    add.setAttackLevel(20);
+                    add.setMagicEnergySpent(15);
+                    break;
+                case 6:
+                    add.setName("CONFRINGO");
+                    add.setAttackLevel(15);
+                    add.setMagicEnergySpent(10);
+                    break;
+                case 7:
+                    add.setName("DEPRIMO");
+                    add.setAttackLevel(10);
+                    add.setMagicEnergySpent(5);
+                    break;
+                case 8:
+                    add.setName("GLACIUS");
+                    add.setAttackLevel(25);
+                    add.setMagicEnergySpent(20);
+                    break;
+                case 9:
+                    add.setName("INCENDIO");
+                    add.setAttackLevel(25);
+                    add.setMagicEnergySpent(20);
+                    break;
+                case 10:
+                    add.setName("AVADA KEDAVRA ");
+                    add.setAttackLevel(100);
+                    add.setMagicEnergySpent(90);
+                    break;
+                case 11:
+                    add.setName("CRUCIATUS ");
+                    add.setAttackLevel(80);
+                    add.setMagicEnergySpent(70);
+                    break;
+                case 12:
+                    add.setName("IMPERIUS");
+                    add.setAttackLevel(90);
+                    add.setMagicEnergySpent(80);
+                    break;
+                default:
+                    System.out.println("Opcion incorrecta.");
+
+            }
+        }
+
+        System.out.println("You already chose the 6 spells");
+        /// selecciona los 6....me falta mostrar lo que es de jugador 1
+
+        return add;
+    }
+
+
+
+}
+
+
+
+
+
+
+
+      //falta cargar estos si funciona
+
 
 
        /* System.out.printf("Healing Spells: \n { \n",
@@ -144,40 +267,7 @@ public class GameActions {
 
     }*/
 
-    //metodo para seleccionar los seis hechizos de ataque, sanacion, recuperacion
-
-    public static AttackSpell addSpell() {
-        Spell star = new AttackSpell();
-        Scanner keyboard = new Scanner(System.in);
-        int continueMenu;
 
 
-        do {
 
-            System.out.println("Please enter a category of spells: \n");
-            System.out.println("\t1)Attack Spell\n");
-            System.out.println("\t2)Healing Spell\n");
-            System.out.println("\t3)Recovery Spell\n");
-            int option = keyboard.nextInt();
 
-            switch (option) {
-                case 1:
-
-                    TipeSpell.AttackSpell.AttackSpellSelection();
-
-                    break;
-                case 2:
-                    /*TipeSpell.HealingSpell.HealingSpellSelection();
-                    break;
-                case 3:
-                    TipeSpell.RecoverySpell.RecoverySpellSelection( );
-                    break;*/
-                default:
-                    System.out.println("Opcion incorrecta.");
-            }
-            System.out.println("Desea agregar otro Hechizo?: \n\t1) Si\n\t2)No");
-            continueMenu = keyboard.nextInt();
-        } while (continueMenu == 1);
-    }
-
-}
