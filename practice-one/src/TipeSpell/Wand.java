@@ -1,6 +1,6 @@
 package TipeSpell;
 
-public class Wand {
+public class Wand { //revisado
     private int points;
     private String name;
 

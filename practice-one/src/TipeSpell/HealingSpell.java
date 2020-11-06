@@ -2,24 +2,49 @@ package TipeSpell;
 
 import java.util.Scanner;
 
-public class HealingSpell {
+public class HealingSpell extends Spell { //revisado
    private Integer lifeRecovered;
-   //Constructor
 
+   //constructor
+   public HealingSpell(String name, int magicEnergySpent, int lifeRecovered) {
+      super(magicEnergySpent);
+      this.name = name;
+      this.lifeRecovered = lifeRecovered;
+   }
 
-    /*public HealingSpell(String name, Integer magicEnergySpent, Integer lifeRecovered) {
-        super(name, magicEnergySpent);
-        this.lifeRecovered = lifeRecovered;
-    }
+   // Getters & Setters
+   public int getLifeRecovered() {
+      return lifeRecovered;
+   }
+   public void setLifeRecovered(int lifeRecovered) {
+      this.lifeRecovered = lifeRecovered;
+   }
 
-    //getter & setter
+   public String getName() {
+      return name;
+   }
 
-    public Integer getLifeRecovered() {
-        return lifeRecovered;
-    }
+   public void setName() {
+      this.name = name;
+   }
 
-    public void setLifeRecovered(Integer lifeRecovered) {
-        this.lifeRecovered = lifeRecovered;
-    }*/
+   @Override
+   public void setMagicEnergySpent(int magicEnergySpent) {
+      super.setMagicEnergySpent(magicEnergySpent);
+   }
+
+   @Override
+   public int getMagicEnergySpent() {
+      return super.getMagicEnergySpent();
+   }
+
+   @Override
+   public String toString() {
+      return "Healing Spell {" +
+              "name: " + name +
+              ", life recovered:" + lifeRecovered +
+              ", magic energy spent:" + magicEnergySpent +
+              "} ";
+   }
 }
 

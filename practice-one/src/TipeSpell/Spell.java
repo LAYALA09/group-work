@@ -5,34 +5,27 @@ import ar.com.ada.online.second.practiceone.GameActions;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Spell { ///tambien falta determinar condicion de de attack >3
-    private String name;
-   private Integer magicEnergySpent;//energia magica usada//attack
-    private Integer lifeRecovered;
-    private Integer attackLevel;//nivel de ataque//attack
-    private Integer recoveryLevel;
+public class Spell { ///revisado
+    protected String name;
+    protected int magicEnergySpent;//energia magica usada//attack
 
-    public Spell(String name) {
-        this.name = name;
-    }
-
-    public Spell(Integer magicEnergySpent) {
-        this.magicEnergySpent = magicEnergySpent;
-    }
-
-
-    public Spell(String name, Integer magicEnergySpent, Integer lifeRecovered, Integer attackLevel, Integer recoveryLevel) {
+    // Constructor
+    public Spell(String name,int magicEnergySpent) {
         this.name = name;
         this.magicEnergySpent = magicEnergySpent;
-        this.lifeRecovered = lifeRecovered;
-        this.attackLevel = attackLevel;
-        this.recoveryLevel = recoveryLevel;
+
     }
-    public Spell(){
+
+    public Spell(int magicEnergySpent) {
         this.name = name;
-        this.attackLevel = attackLevel;
-        this.magicEnergySpent = magicEnergySpent;
-    }
+        this.magicEnergySpent = this.magicEnergySpent;
+
+
+      }
+        //Getter & Setter
+
+
+
 
     public String getName() {
         return name;
@@ -42,32 +35,21 @@ public class Spell { ///tambien falta determinar condicion de de attack >3
         this.name = name;
     }
 
-    public Integer getAttackLevel() {
-        return attackLevel;
-    }
-
-    public void setAttackLevel(Integer attackLevel) {
-        this.attackLevel = attackLevel;
-    }
-
-    public Integer getMagicEnergySpent() {
+    public int getMagicEnergySpent() {
         return magicEnergySpent;
     }
 
-    public void setMagicEnergySpent(Integer magicEnergySpent) {
+    public void setMagicEnergySpent(int magicEnergySpent) {
         this.magicEnergySpent = magicEnergySpent;
     }
-
     @Override
     public String toString() {
-        return String.format("Spell:" +
-                "name='" + name + '\'' +
-                ", attackLevel=" + attackLevel +
-                ", magicEnergySpent=" + magicEnergySpent +
-
-                '}');
+        return "name: " + name +
+                "\nMagic energy spent: " + magicEnergySpent + "\n"
+                ;
     }
 }
+
 
 
 
