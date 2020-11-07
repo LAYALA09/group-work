@@ -105,16 +105,23 @@ public  class CharacterTwo { //revisado
 
     @Override
     public String toString() {
-        return String.format(
+        String output = String.format(
                 "Character {\n Type of Character: %s \n Name: %s Location: %s \n Life span: %d \n Magic energy: %d \n Spells: %s \n } ",
                typeOfCharacter,
                 name,
                 location,
                 lifeSpan,
-                magicEnergy,
-                spells);
+                magicEnergy);
+        String spellsTxt = "\n\t";
+        for (int i = 0; i < spells.size(); i++) {
+            spellsTxt += "\t" + spellsTxt + spells.get(i).toString() + "\n";
+            spellsTxt = "\t" + spellsTxt + spells.get(i).toString() + "\n";
+        }
+        output = output + spellsTxt;
+        return output;
+    }
     }
 
 
-}
+
 
