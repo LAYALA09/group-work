@@ -6,43 +6,45 @@ import superclass.CharacterTwo;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class AttackSpell extends Spell { //revisado
+public class AttackSpell extends Spell { //revisabado
 
-    private int attackLevel;
-
-    public AttackSpell(String name, int magicEnergySpent, int attackLevel) {
+    private int damageMade;
+    // Constructor
+    public AttackSpell( String name, int magicEnergySpent, int damageMade) {
         super(name, magicEnergySpent);
-        this.attackLevel = attackLevel;
+        this.damageMade = damageMade;
     }
-
-    public int getAttackLevel() {
-        return attackLevel;
+    //Getter & Setter
+    public int getDamageMade() {
+        return damageMade;
     }
-
-    public void setAttackLevel(int attackLevel) {
-        this.attackLevel = attackLevel;
+    public void setDamageMade(int damageMade) {
+        this.damageMade = damageMade;
     }
-
+    public String getName() {
+        return name;
+    }
+    public void setName() {
+        this.name = name;
+    }
+    @Override
+    public void setMagicEnergySpent(int magicEnergySpent) {
+        super.setMagicEnergySpent(magicEnergySpent);
+    }
     @Override
     public int getMagicEnergySpent() {
         return super.getMagicEnergySpent();
     }
 
     @Override
-    public void setMagicEnergySpent(int magicEnergySpent) {
-        super.setMagicEnergySpent(magicEnergySpent);
-    }
-
-    @Override
     public String toString() {
-        return "Attack  Spell :" +
-                "name='" + name + '\'' +
-                "Attack Level:" + attackLevel + '\'' +
-                "Magic energy spent:" + magicEnergySpent
-                ;
+
+        return "Attack Spell" +
+                "\n\t name: " + name +
+                "\n\t damage made: " + damageMade +
+                "\n\t magic energy spent: " + magicEnergySpent + "\n";
     }
 }
-
 
 
 

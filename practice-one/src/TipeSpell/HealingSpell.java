@@ -2,16 +2,16 @@ package TipeSpell;
 
 import java.util.Scanner;
 
-public class HealingSpell extends Spell { //revisado
+public class HealingSpell extends Spell { //revisado sabado
    private Integer lifeRecovered;
 
-   //constructor
-   public HealingSpell(String name, int magicEnergySpent, int lifeRecovered) {
-      super(magicEnergySpent);
+
+   // Constructor
+   public HealingSpell( String name, int magicEnergySpent, int lifeRecovered) {
+      super(name, magicEnergySpent);
       this.name = name;
       this.lifeRecovered = lifeRecovered;
    }
-
    // Getters & Setters
    public int getLifeRecovered() {
       return lifeRecovered;
@@ -19,20 +19,16 @@ public class HealingSpell extends Spell { //revisado
    public void setLifeRecovered(int lifeRecovered) {
       this.lifeRecovered = lifeRecovered;
    }
-
    public String getName() {
       return name;
    }
-
    public void setName() {
       this.name = name;
    }
-
    @Override
    public void setMagicEnergySpent(int magicEnergySpent) {
       super.setMagicEnergySpent(magicEnergySpent);
    }
-
    @Override
    public int getMagicEnergySpent() {
       return super.getMagicEnergySpent();
@@ -40,11 +36,12 @@ public class HealingSpell extends Spell { //revisado
 
    @Override
    public String toString() {
-      return "Healing Spell {" +
-              "name: " + name +
-              ", life recovered:" + lifeRecovered +
-              ", magic energy spent:" + magicEnergySpent +
-              "} ";
+
+      return "Healing Spell" +
+              "\n\t name: " + name +
+              "\n\t life recovered: " + lifeRecovered +
+              "\n\t magic energy spent: " + magicEnergySpent + "\n";
    }
 }
+
 

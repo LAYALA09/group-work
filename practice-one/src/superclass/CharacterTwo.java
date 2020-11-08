@@ -5,7 +5,7 @@ import TipeSpell.Spell;
 import java.util.List;
 import java.util.Objects;
 
-public  class CharacterTwo { //revisado
+public  abstract class CharacterTwo { //revisado sBA
     protected String name;
     protected String location;
     protected Integer lifeSpan;
@@ -64,7 +64,7 @@ public  class CharacterTwo { //revisado
 
     //methods
 
-    public List<Spell> getSpells() {
+    public List<Spell>getSpells(int i) {
         return spells;
     }
 
@@ -73,7 +73,8 @@ public  class CharacterTwo { //revisado
     }
 
     //methods
-    public boolean isDeadOrAlive(boolean alive) {
+    public boolean isDeadOrAlive() {
+        boolean alive;
         if (lifeSpan <= 0) {
             alive = false;
         } else {
@@ -81,7 +82,7 @@ public  class CharacterTwo { //revisado
         }
         return alive;
     }
-
+    public abstract void configSpells ();
 
     @Override
     public boolean equals(Object obj) {
@@ -106,7 +107,7 @@ public  class CharacterTwo { //revisado
     @Override
     public String toString() {
         String output = String.format(
-                "Character {\n Type of Character: %s \n Name: %s Location: %s \n Life span: %d \n Magic energy: %d \n Spells: %s \n } ",
+                "\n Type of Character: %s \n Name: %s Location: %s \n Life span: %d \n Magic energy: %d \n Spells: %s \n } ",
                typeOfCharacter,
                 name,
                 location,
@@ -114,7 +115,7 @@ public  class CharacterTwo { //revisado
                 magicEnergy);
         String spellsTxt = "\n\t";
         for (int i = 0; i < spells.size(); i++) {
-            spellsTxt += "\t" + spellsTxt + spells.get(i).toString() + "\n";
+
             spellsTxt = "\t" + spellsTxt + spells.get(i).toString() + "\n";
         }
         output = output + spellsTxt;

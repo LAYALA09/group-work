@@ -7,7 +7,7 @@ import superclass.CharacterTwo;
 
 import java.util.Objects;
 
-public class Elf extends CharacterTwo {  //revisado
+public class Elf extends CharacterTwo {  //revi sabb
 
     protected boolean freeElf;
 
@@ -15,15 +15,13 @@ public class Elf extends CharacterTwo {  //revisado
         return freeElf;
     }
 
-    public boolean isFreeElf() {
-        return freeElf;
-    }
+
 
     public void setFreeElf(boolean freeElf) {
         this.freeElf = freeElf;
     }
 
-    //methods
+
 
     public void isFreeOrNot() {
         int counterAttackSpells = 0;
@@ -40,7 +38,7 @@ public class Elf extends CharacterTwo {  //revisado
             for (int i = 0; i < this.spells.size(); i++) {
                 if (this.spells.get(i) instanceof AttackSpell) {
                     AttackSpell attackSpell = (AttackSpell) this.spells.get(i);
-                    attackSpell.setAttackLevel(attackSpell.getAttackLevel() + 5);
+                    attackSpell.setDamageMade(attackSpell.getDamageMade() + 5);
                 }
                 if (this.spells.get(i) instanceof HealingSpell) {
                     HealingSpell healingSpell = (HealingSpell) this.spells.get(i);
@@ -74,22 +72,26 @@ public class Elf extends CharacterTwo {  //revisado
                 spells.equals(that.spells);
     }
     @Override
+
     public int hashCode() {
         return Objects.hash(name, location, lifeSpan, magicEnergy, typeOfCharacter, spells);
     }
+
     @Override
     public String toString() {
         String output = String.format(
-                "Character{ \n Type of Character: %s \n Name: %s  Location: %s \n Life span: %d \n Magic energy: %d \n Spells: \n}",
+                " Type of Character: %s \n Name: %s \n Location: %s \n Life span: %d \n Magic energy: %d \n Are you a free elf? %s \n Spells:",
                 typeOfCharacter,
                 name,
                 location,
                 lifeSpan,
-                magicEnergy);
+                magicEnergy,
+                magicEnergy,
+                freeElf);
         String spellsTxt = "\n\t";
         for (int i = 0; i < spells.size(); i++) {
 
-            spellsTxt = "\t" + spellsTxt + spells.get(i).toString() + "\n";
+            spellsTxt = "\t" + spellsTxt + (i+1) +") " +spells.get(i).toString() + "\n";
         }
         output = output + spellsTxt;
         return output;
