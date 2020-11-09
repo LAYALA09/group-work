@@ -11,7 +11,7 @@ public  abstract class CharacterTwo { //revisado sBA
     protected Integer lifeSpan;
     protected Integer magicEnergy;
     protected String typeOfCharacter;
-    protected List<Spell> spells;
+    public List<Spell> spells;
 
 
 
