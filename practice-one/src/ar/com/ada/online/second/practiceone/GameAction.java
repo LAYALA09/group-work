@@ -18,12 +18,12 @@ public class GameAction {
         if (userPlaying.isDeadOrAlive()) {
             System.out.println("This is your status now:");
             System.out.println(userPlaying);
-            System.out.println("Choose the spell you want to do:");
+            System.out.println(otherPlayer.getName()+" choose the spell  want to do:");
             spellSelected = keyboard.nextInt();
             if (userPlaying.spells.get(spellSelected - 1) instanceof AttackSpell) {
                 AttackSpell attackSpell = (AttackSpell) userPlaying.spells.get(spellSelected - 1);
                 if (userPlaying.getMagicEnergy() < attackSpell.getMagicEnergySpent()) {
-                    System.out.println("Your magic energy is not enough for this spell. You loose your turn and gain +10 magic energy points.");
+                    System.out.println(" your magic energy is not enough for this spell. You loose your turn and gain +10 magic energy points.");
                     userPlaying.setMagicEnergy(userPlaying.getMagicEnergy() + 10);
                 } else {
                     userPlaying.setMagicEnergy(userPlaying.getMagicEnergy() - attackSpell.getMagicEnergySpent());
@@ -57,7 +57,7 @@ public class GameAction {
                     } while (aux);
                     if (locationOpponent == otherPlayer.getLocation()) {
                         otherPlayer.setLifeSpan(otherPlayer.getLifeSpan() - attackSpell.getDamageMade());
-                        System.out.println("Great! You hit your target.");
+                        System.out.println(otherPlayer.getName()+" Great! You hit your target.");
                     } else {
                         System.out.println("Sorry, you did not hit your target.");
                     }
@@ -87,7 +87,7 @@ public class GameAction {
                 }
             }
         } else {
-            System.out.println(" Sorry, you are dead. \n You lost! \n The game ends.");
+            System.out.println(otherPlayer.getName()+ ".Sorry, you are dead. \n You lost! \n The game ends.");
             System.exit(0);
         }
         if (otherPlayer.getLifeSpan() <= 0) {
