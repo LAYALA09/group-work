@@ -36,6 +36,7 @@ public class SelectionAction {
             }
         } while (aux);
     }
+    //metodo mago
     public static Wizard gameWizard() {
         int option;
         Wizard playerWizard = new Wizard();
@@ -73,12 +74,14 @@ public class SelectionAction {
             }
         } while (aux);
         System.out.println("");
+        //instanciamos playerWizart
         playerWizard.setLifeSpan(100);
         playerWizard.setMagicEnergy(100);
         playerWizard.setTypeOfCharacter("Wizard");
         playerWizard.setWand(WandWizard());
         playerWizard.setSpells(SpellSelection());
         playerWizard.isDarkOrNot();
+        //se determina si el mago es ocuro o blanco
         if (playerWizard.isDarkWizard())
             System.out.println("You are a dark wizard.");
         else
@@ -104,14 +107,18 @@ public class SelectionAction {
                 "Alamo temblon: +5 attacking points\n"
         );
         System.out.println();
+        //aplicamos metodo random para que la varita elija al mago.
         Random random = new Random();
         for (int i = 0; i < nWand.size(); i++) {
         }
         Wand PlayerWand = new Wand();
         PlayerWand = nWand.get(random.nextInt(nWand.size()));
+        //mostramos que varita eligio al mago
         System.out.println("The wand " + PlayerWand + " has selected you.");
         return PlayerWand;
     }
+
+    //metodo elfo
     public static Elf gameElf() {
         Elf playerElf = new Elf();
         int option;
@@ -149,11 +156,13 @@ public class SelectionAction {
 
 
         System.out.println("");
+        //instanciamos playerElf
         playerElf.setTypeOfCharacter("Elf");
         playerElf.setLifeSpan(100);
         playerElf.setMagicEnergy(100);
         playerElf.setSpells(SpellSelection());
         playerElf.isFreeOrNot();
+        //se determina si el elfo es libre o oscuro
         if (playerElf.isfreeElf())
             System.out.println("You are a free elf");
         else
@@ -163,6 +172,8 @@ public class SelectionAction {
         return playerElf;
 
     }
+
+    //seleccion de hechizos--metodo
     public static List<Spell> SpellSelection() {
         Scanner keyboard = new Scanner(System.in);
         int option;
@@ -198,12 +209,14 @@ public class SelectionAction {
         );
         List<Spell> PlayerChosenSpells = new ArrayList<>();
         boolean aux;
+        //usamos  for para limitar la eleccion a 6 hechizos por jugador
         for (int i = 0; i < 6; i++) {
             do {
                 aux = false;
                 System.out.println("Choose your spell number " + (i + 1));
                 System.out.print("Option: ");
                 option = keyboard.nextInt();
+                //se aplica switch para cargar nombres de hechizos, vidas etc, en PlayerChosenSpells
                 switch (option) {
                     case 1:
                         PlayerChosenSpells.add(new AttackSpell("BOMBARDA MAXIMA", 5, 10));

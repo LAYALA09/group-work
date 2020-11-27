@@ -1,12 +1,8 @@
 package TipeSpell;
 
-import ar.com.ada.online.second.practiceone.Wizard;
-import superclass.CharacterTwo;
 
-import java.util.ArrayList;
-import java.util.Scanner;
 
-public class AttackSpell extends Spell { //revisabado
+public class AttackSpell extends Spell {
 
     private int damageMade;
     // Constructor

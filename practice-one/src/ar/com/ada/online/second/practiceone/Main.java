@@ -32,7 +32,7 @@ public class Main {
             System.out.println("\n \nPlayer 2, is your turn.");
             GameAction.castSpell(player2, player1);
         } while (player1.isDeadOrAlive() || player2.isDeadOrAlive());
-
+      //usamos do while para indicar hasta cuando iterar, el indicador isDeadOrAlive()
     }
 }
 

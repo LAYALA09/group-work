@@ -1,8 +1,8 @@
 package TipeSpell;
 
-import java.util.Scanner;
 
-public class HealingSpell extends Spell { //revisado sabado
+
+public class HealingSpell extends Spell {
    private Integer lifeRecovered;
 
 

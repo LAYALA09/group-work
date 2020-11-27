@@ -53,9 +53,7 @@ public  abstract class CharacterTwo { //revisado sBA
     }
 
 
-    public String getTypeOfCharacter() {
-        return typeOfCharacter;
-    }
+
 
     public void setTypeOfCharacter(String typeOfCharacter) {
         this.typeOfCharacter = typeOfCharacter;
@@ -64,7 +62,7 @@ public  abstract class CharacterTwo { //revisado sBA
 
     //methods
 
-    public List<Spell>getSpells(int i) {
+    public List<Spell>getSpells() {
         return spells;
     }
 

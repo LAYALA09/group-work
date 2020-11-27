@@ -7,7 +7,7 @@ import superclass.CharacterTwo;
 
 import java.util.Objects;
 
-public class Elf extends CharacterTwo {  //revi sabb
+public class Elf extends CharacterTwo {
 
     protected boolean freeElf;
 
@@ -25,10 +25,13 @@ public class Elf extends CharacterTwo {  //revi sabb
 
     public void isFreeOrNot() {
         int counterAttackSpells = 0;
+        //contador para determinar si elige mas de 3 hechizos de ataque
+        //size devuelve el nro de elemento de esta lista
         for (int i = 0; i < this.spells.size(); i++) {
             if (this.spells.get(i) instanceof AttackSpell)
                 counterAttackSpells++;
         }
+        //en caso de ser >3 asignamos a la variable freeElf como Elfo libre
         freeElf = (counterAttackSpells > 3);
     }
 
@@ -38,14 +41,17 @@ public class Elf extends CharacterTwo {  //revi sabb
             for (int i = 0; i < this.spells.size(); i++) {
                 if (this.spells.get(i) instanceof AttackSpell) {
                     AttackSpell attackSpell = (AttackSpell) this.spells.get(i);
+                    //incrementamos en 5 para los elfos libres
                     attackSpell.setDamageMade(attackSpell.getDamageMade() + 5);
                 }
                 if (this.spells.get(i) instanceof HealingSpell) {
                     HealingSpell healingSpell = (HealingSpell) this.spells.get(i);
+                    //incrementamos en 5 para los elfos libres
                     healingSpell.setLifeRecovered(healingSpell.getLifeRecovered() + 5);
                 }
                 if (this.spells.get(i) instanceof RecoverySpell) {
                     RecoverySpell recoverySpell = (RecoverySpell) this.spells.get(i);
+                    //incrementamos en 5 para los elfos libres
                     recoverySpell.setEnergyRecovered(recoverySpell.getEnergyRecovered() + 5);
                 }
             }
@@ -53,6 +59,7 @@ public class Elf extends CharacterTwo {  //revi sabb
             for (int i = 0; i < this.spells.size(); i++) {
                 if (this.spells.get(i) instanceof HealingSpell) {
                     HealingSpell healingSpell = (HealingSpell) this.spells.get(i);
+                    // elfos en cautiverio se incrementa en 10
                     healingSpell.setLifeRecovered(healingSpell.getLifeRecovered() + 10);
 
                 }
@@ -89,6 +96,7 @@ public class Elf extends CharacterTwo {  //revi sabb
                 magicEnergy,
                 freeElf);
         String spellsTxt = "\n\t";
+
         for (int i = 0; i < spells.size(); i++) {
 
             spellsTxt = "\t" + spellsTxt + (i+1) +") " +spells.get(i).toString() + "\n";

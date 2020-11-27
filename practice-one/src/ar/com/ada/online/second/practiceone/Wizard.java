@@ -8,7 +8,7 @@ import superclass.CharacterTwo;
 
 import java.util.Objects;
 
-public class Wizard extends CharacterTwo { ///revisado
+public class Wizard extends CharacterTwo {
 
     protected Wand wand;
     protected boolean darkWizard;

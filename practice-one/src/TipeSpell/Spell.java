@@ -1,6 +1,6 @@
 package TipeSpell;
 
-public class Spell { ///revisado
+public class Spell {
     protected int magicEnergySpent;
     protected String name;
     // Constructor

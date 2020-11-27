@@ -1,6 +1,6 @@
 package TipeSpell;
 
-import java.util.Scanner;
+
 
 public class RecoverySpell extends Spell{
     private int energyRecovered;

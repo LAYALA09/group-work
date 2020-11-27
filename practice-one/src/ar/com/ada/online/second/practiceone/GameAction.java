@@ -15,15 +15,18 @@ public class GameAction {
         int locationOpponentInt;
         String locationOpponent;
         int spellSelected;
+        //si esta vivo
         if (userPlaying.isDeadOrAlive()) {
             System.out.println("This is your status now:");
             System.out.println(userPlaying);
             System.out.println(otherPlayer.getName()+" choose the spell  want to do:");
+            //selecciona hechizo
             spellSelected = keyboard.nextInt();
             if (userPlaying.spells.get(spellSelected - 1) instanceof AttackSpell) {
                 AttackSpell attackSpell = (AttackSpell) userPlaying.spells.get(spellSelected - 1);
                 if (userPlaying.getMagicEnergy() < attackSpell.getMagicEnergySpent()) {
                     System.out.println(" your magic energy is not enough for this spell. You loose your turn and gain +10 magic energy points.");
+                    //si no tiene energias suficiente se adiciona 10 para la siguiente ronda
                     userPlaying.setMagicEnergy(userPlaying.getMagicEnergy() + 10);
                 } else {
                     userPlaying.setMagicEnergy(userPlaying.getMagicEnergy() - attackSpell.getMagicEnergySpent());
@@ -37,12 +40,14 @@ public class GameAction {
                         System.out.print("Option: ");
                         locationOpponentInt = keyboard.nextInt();
                         switch (locationOpponentInt) {
+                            //ubicacion del oponente con booleano hacemos hasta que sea TRUE la variable aux
                             case 1:
                                 aux = false;
                                 locationOpponent = "1) Hogwarts";
                                 break;
                             case 2:
                                 aux = false;
+
                                 locationOpponent = "2) Diagon Alley";
                                 break;
                             case 3:
@@ -55,6 +60,7 @@ public class GameAction {
                                 break;
                         }
                     } while (aux);
+                    //Si son iguales el personaje dio con el oponente
                     if (locationOpponent == otherPlayer.getLocation()) {
                         otherPlayer.setLifeSpan(otherPlayer.getLifeSpan() - attackSpell.getDamageMade());
                         System.out.println(otherPlayer.getName()+" Great! You hit your target.");
@@ -63,10 +69,13 @@ public class GameAction {
                     }
                 }
             }
+            //si elije hechizo de sanacion
             if (userPlaying.spells.get(spellSelected - 1) instanceof HealingSpell) {
                 HealingSpell healingSpell = (HealingSpell) userPlaying.spells.get(spellSelected - 1);
                 if (userPlaying.getMagicEnergy() < healingSpell.getMagicEnergySpent()) {
+                    // para determinar la energia si cumple con lo solicitado
                     System.out.println("Your magic energy is not enough for this spell. You loose your turn and gain +10 magic energy points.");
+                   //informamos y sumamos 10
                     userPlaying.setMagicEnergy(userPlaying.getMagicEnergy() + 10);
                 } else {
                     userPlaying.setLifeSpan(userPlaying.getLifeSpan() + healingSpell.getLifeRecovered());
@@ -75,6 +84,7 @@ public class GameAction {
                         userPlaying.setLifeSpan(100);
                 }
             }
+            //si elije hechizo de sanacion
             if (userPlaying.spells.get(spellSelected - 1) instanceof RecoverySpell) {
                 RecoverySpell recoverySpell = (RecoverySpell) userPlaying.spells.get(spellSelected - 1);
                 if (userPlaying.getMagicEnergy() < recoverySpell.getMagicEnergySpent()) {
@@ -87,13 +97,16 @@ public class GameAction {
                 }
             }
         } else {
+            //muere y se informa
             System.out.println(otherPlayer.getName()+ ".Sorry, you are dead. \n You lost! \n The game ends.");
             System.exit(0);
         }
         if (otherPlayer.getLifeSpan() <= 0) {
+            //muere el oponente e informamos
             System.out.println(" Your opponent is dead. \n You win! \n The game ends.");
             System.exit(0);
         }
+        //el jugador puede cambiar de ubicacion en cada partida
         System.out.println("Now you can change your location if you want.");
         boolean auxiliar = true;
         do {
@@ -121,6 +134,8 @@ public class GameAction {
                     break;
             }
         } while (auxiliar);
+
+        //despues de cada partida informamos el estado del personaje
         System.out.printf("Here's your status: \n Name: %s \n Location: %s \n Life span: %d \n Magic energy: %d \n",
                 userPlaying.getName(),
                 userPlaying.getLocation(),

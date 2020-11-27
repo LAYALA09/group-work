@@ -90,9 +90,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="638" y="0" key="#com.intellij.ide.util.MemberChooser" timestamp="1604715910106">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="425" y="0" key="#com.intellij.ide.util.MemberChooser" timestamp="1606506658535">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state x="425" y="0" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1606506658535" />
     <state x="638" y="0" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1604715910106" />
     <state x="1005" y="352" width="776" height="353" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1604622511768">
       <screen x="0" y="0" width="1920" height="1040" />

@@ -1,6 +1,6 @@
 package ar.com.ada.online.second.practiceone;
 
-public class WandWizard { //revisado
+public class WandWizard {
     private int points;
     private String name;
     public WandWizard (int points, String name) {
