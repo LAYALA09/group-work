@@ -73,6 +73,7 @@ public  abstract class CharacterTwo { //revisado sBA
     }
 
     //methods
+    //metodo de vida o muerte
     public boolean isDeadOrAlive() {
         boolean alive;
         if (lifeSpan <= 0) {

@@ -36,7 +36,7 @@ public class HealingSpell extends Spell {
 
    @Override
    public String toString() {
-
+   //retorna los datos solicitados para el hechizo de sanacion
       return "Healing Spell" +
               "\n\t name: " + name +
               "\n\t life recovered: " + lifeRecovered +

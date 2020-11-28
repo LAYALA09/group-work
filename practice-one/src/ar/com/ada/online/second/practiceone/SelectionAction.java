@@ -91,6 +91,7 @@ public class SelectionAction {
     }
     //    metodo de varitas
     public static Wand WandWizard() {
+        //usamos arraylist para hacer lista  varitas
         List<Wand> nWand = new ArrayList<>();
         nWand.add(new Wand(4, "Madera de serpiente"));
         nWand.add(new Wand(5, "Nogal negro"));

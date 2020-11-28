@@ -33,6 +33,7 @@ public class GameAction {
                     boolean aux = true;
                     do {
                         aux = true;
+                        //elige ubicacion
                         System.out.println("Choose the location you want to throw it to: ");
                         System.out.println("1) Hogwarts");
                         System.out.println("2) Diagon Alley");

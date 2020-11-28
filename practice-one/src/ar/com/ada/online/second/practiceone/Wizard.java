@@ -75,9 +75,11 @@ public class Wizard extends CharacterTwo {
     }
 
     // Methods
+    //hacemos for para contar la cantidad de hechizos de ataques que elija
     public void isDarkOrNot() {
         int counterAttackSpells = 0;
         for (int i = 0; i < this.spells.size(); i++) {
+            //El operador instanceof nos permite comprobar si un objeto es de una clase concreta
             if (this.spells.get(i) instanceof AttackSpell)
                 counterAttackSpells++;
         }

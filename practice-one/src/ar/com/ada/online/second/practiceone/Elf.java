@@ -98,7 +98,7 @@ public class Elf extends CharacterTwo {
         String spellsTxt = "\n\t";
 
         for (int i = 0; i < spells.size(); i++) {
-
+          //sumamos para informar cuantos hechizos tiene elegidos
             spellsTxt = "\t" + spellsTxt + (i+1) +") " +spells.get(i).toString() + "\n";
         }
         output = output + spellsTxt;

@@ -31,6 +31,7 @@ public class Wand {
 
         @Override
         public String toString () {
+        //retorna nombre varita
             return "Wand{" +
                     "name='" + name + '\'' +
                     '}';

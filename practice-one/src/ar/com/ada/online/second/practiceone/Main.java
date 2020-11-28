@@ -24,7 +24,9 @@ public class Main {
         //Empieza la partida
         System.out.println("The game begins");
         System.out.println("");
+        //Partida jugador 1
         player1.isDeadOrAlive();
+        //Partida jugador 2
         player2.isDeadOrAlive();
         do {
             System.out.println("\n \nPlayer 1, is your turn.");

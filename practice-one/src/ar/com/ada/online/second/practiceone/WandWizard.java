@@ -20,7 +20,7 @@ public class WandWizard {
     public void setName(String name) {
         this.name = name;
     }
-
+     //mostramos con toString nombre de varita y puntos para el ataque
     @Override
     public String toString() {
         return name + " +" + points + " attacking points";

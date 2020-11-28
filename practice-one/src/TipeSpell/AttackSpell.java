@@ -34,7 +34,7 @@ public class AttackSpell extends Spell {
 
     @Override
     public String toString() {
-
+         //retorna los datos solicitados para el hechizo de ataque
         return "Attack Spell" +
                 "\n\t name: " + name +
                 "\n\t damage made: " + damageMade +

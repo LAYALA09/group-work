@@ -33,7 +33,7 @@ public class RecoverySpell extends Spell{
 
     @Override
     public String toString() {
-
+//retorna los datos solicitados para el hechizo de recuperacion
         return "Recovery Spell" +
                 "\n\t name: " + name +
                 "\n\t energy recovered: " + energyRecovered +
